@@ -10,7 +10,7 @@ import org.springframework.messaging.handler.annotation.Header;
  *
  * @author Roman Turusov
  */
-@MessagingGateway(defaultRequestChannel = "textInputChanel")
+@MessagingGateway(defaultRequestChannel = "textInputChannel")
 public interface FileGateway {
 
     /**

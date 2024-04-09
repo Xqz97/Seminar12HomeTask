@@ -47,7 +47,10 @@ public class IntegrationConfig {
     @Bean
     @Transformer(inputChannel = "textInputChannel", outputChannel = "fileWriterChannel")
     public GenericTransformer<String, String> mainTransformer() {
-        return text -> text;
+        return text -> {
+            //какая-то логика
+            return text;
+        };
     }
 
     /**

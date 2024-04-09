@@ -1,0 +1,42 @@
+18:15:06.630 [main] INFO  c.e.S.Seminar12HomeTaskApplication - Starting Seminar12HomeTaskApplication using Java 21.0.2 with PID 29304 (D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask\target\classes started by admin in D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask)
+18:15:06.633 [main] INFO  c.e.S.Seminar12HomeTaskApplication - No active profile set, falling back to 1 default profile: "default"
+18:15:07.164 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+18:15:07.172 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+18:15:07.520 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+18:15:07.527 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+18:15:07.529 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18:15:07.529 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+18:15:07.572 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18:15:07.572 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 904 ms
+18:15:07.980 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+18:15:07.980 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Seminar3HomeTask.errorChannel' has 1 subscriber(s).
+18:15:07.980 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+18:15:07.981 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {transformer:mainTransformer.transformer} as a subscriber to the 'textInputChannel' channel
+18:15:07.981 [main] INFO  o.s.i.channel.DirectChannel - Channel 'Seminar3HomeTask.textInputChannel' has 1 subscriber(s).
+18:15:07.981 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'mainTransformer.transformer'
+18:15:07.981 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {file:outbound-channel-adapter:messageHandler.serviceActivator} as a subscriber to the 'fileWriterChannel' channel
+18:15:07.981 [main] INFO  o.s.i.channel.DirectChannel - Channel 'Seminar3HomeTask.fileWriterChannel' has 1 subscriber(s).
+18:15:07.981 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean 'messageHandler.serviceActivator'
+18:15:07.981 [main] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - started bean 'fileGateway#writeToFile(String, String)'
+18:15:07.981 [main] INFO  o.s.i.g.AnnotationGatewayProxyFactoryBean - started bean 'fileGateway'; defined in: 'file [D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask\target\classes\com\example\Seminar12HomeTask\services\FileGateway.class]'; from source: 'file [D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask\target\classes\com\example\Seminar12HomeTask\services\FileGateway.class]'
+18:15:07.981 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+18:15:07.996 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+18:15:08.002 [main] INFO  c.e.S.Seminar12HomeTaskApplication - Started Seminar12HomeTaskApplication in 1.624 seconds (process running for 1.996)
+18:15:13.164 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18:15:13.164 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18:15:13.165 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18:15:13.183 [http-nio-8080-exec-2] INFO  c.e.S.controllers.UserController - GET request received to fetch user list
+18:15:15.684 [http-nio-8080-exec-3] INFO  c.e.S.controllers.UserController - POST request received to add user from body: User{name='roman', age=123, email='roman@example.com'}
+18:15:25.121 [http-nio-8080-exec-4] INFO  c.e.S.controllers.UserController - POST request received to add user from body: User{name='andrey', age=123, email='roman@example.com'}
+18:15:38.497 [http-nio-8080-exec-6] INFO  c.e.S.controllers.UserController - POST request received to add user from body: User{name='roza', age=123, email='roman@example.com'}
+18:15:52.445 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {file:outbound-channel-adapter:messageHandler.serviceActivator} as a subscriber to the 'fileWriterChannel' channel
+18:15:52.445 [SpringApplicationShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'Seminar3HomeTask.fileWriterChannel' has 0 subscriber(s).
+18:15:52.446 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'messageHandler.serviceActivator'
+18:15:52.446 [SpringApplicationShutdownHook] INFO  o.s.i.g.GatewayProxyFactoryBean$MethodInvocationGateway - stopped bean 'fileGateway#writeToFile(String, String)'
+18:15:52.446 [SpringApplicationShutdownHook] INFO  o.s.i.g.AnnotationGatewayProxyFactoryBean - stopped bean 'fileGateway'; defined in: 'file [D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask\target\classes\com\example\Seminar12HomeTask\services\FileGateway.class]'; from source: 'file [D:\Turusov.RA\Work\Учеба\Java\Geekbrains\Specialization\SpringSeminarAndLection\Seminar12\Seminar12HomeTask\target\classes\com\example\Seminar12HomeTask\services\FileGateway.class]'
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'Seminar3HomeTask.errorChannel' has 0 subscriber(s).
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean '_org.springframework.integration.errorLogger'
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - Removing {transformer:mainTransformer.transformer} as a subscriber to the 'textInputChannel' channel
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.channel.DirectChannel - Channel 'Seminar3HomeTask.textInputChannel' has 0 subscriber(s).
+18:15:52.447 [SpringApplicationShutdownHook] INFO  o.s.i.endpoint.EventDrivenConsumer - stopped bean 'mainTransformer.transformer'
