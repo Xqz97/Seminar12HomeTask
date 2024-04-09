@@ -1,0 +1,1 @@
+User{name='Roman', age=123, email='roman@example.com'}
